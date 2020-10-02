@@ -1,5 +1,5 @@
 /*
- * Live2D Widget
+* Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
  */
 
@@ -22,7 +22,7 @@ function loadWidget(config) {
 			<canvas id="live2d" width="800" height="800"></canvas>
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-comment"></span>
-				<span class="fa fa-lg fa-paper-plane"></span>
+				<span class="fa fa-lg fa-paper-plane"></span> 
 				<span class="fa fa-lg fa-user-circle"></span>
 				<span class="fa fa-lg fa-street-view"></span>
 				<span class="fa fa-lg fa-camera-retro"></span>
@@ -122,8 +122,31 @@ function loadWidget(config) {
 			else if (domain === "google") text = `Hello！来自 谷歌搜索 的朋友<br>欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
 			else text = `Hello！来自 <span>${referrer.hostname}</span> 的朋友`;
 		} else {
-			text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+			text = `欢迎来到D2304班级主页 我是班姬XiuFei~酱 今天也要好好学习生物哦`;
 		}
+		var cookie = document.cookie;
+		s = cookie.indexOf("RealName=");
+		t = cookie.indexOf("cla_Name=")
+		if (s!=-1){
+			s += 9;
+			var name="";
+			for (var i=s; i<cookie.length; i++) {if (cookie[i]!='&'){name += cookie[i];}else{break}}
+			name = decodeURI(name);
+			text="欢迎来到D2304班级主页,"+name+"酱~! 我是班姬XiuFei~酱 今天也要好好学习生物哦";
+		}
+		if (t!=-1){
+			t += 9;
+			var name=cookie.subString(t);
+			name = decodeURI(name);
+			if (name!="东-高一（04）"){
+				text="又是"+name+"的死宅吗？，又在电子班牌上调戏人家了";
+			}
+			else{
+				text="欢迎来到D2304班级主页 我是班姬XiuFei~酱 今天也要好好学习生物哦";
+			}
+				
+		}
+
 		showMessage(text, 7000, 8);
 	})();
 

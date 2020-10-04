@@ -1,5 +1,6 @@
 {
   "models": [
+    "Sakura",
     "Rem",
     "Potion-Maker/Pio",
     "Potion-Maker/Tia",
@@ -40,12 +41,12 @@
     "Mikoto",
     "Sagiri",
     "Xiaoban",
-    "Sakura",
     "Violet",
     "Nero",
     "Mai"
   ],
   "messages": [
+    "来年的春天，一起去赏樱吧",
     "在讨论未来的时候，怎么能没有笑容呢？",
     "来自 Potion Maker 的 Pio 酱 ~",
     "来自 Potion Maker 的 Tia 酱 ~",
@@ -62,7 +63,6 @@
     "不要叫我哔哩哔哩",
     "人家不是死宅",
     "1~2~1~",
-    "来年的春天，一起去赏樱吧",
     "不存在不必送达的信件！",
     "苍剑已死，赤剑当立",
     "人活着就是为了麻衣学姐"

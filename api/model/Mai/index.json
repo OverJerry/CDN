@@ -1,0 +1,41 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"sakurajima4.moc",
+	"textures":[
+		"sakurajima4.4096/texture_00.png"
+	],
+	"layout":
+	{
+		"center_x":0.1,
+		"y":1.2,
+		"width":1.8
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"},
+		{"name":"head2", "id":"D_REF.HEAD1"},
+		{"name":"body2", "id":"D_REF.BOOBS"}
+
+	],
+	"motions":{
+		"tap_head":[
+			{"file":"1can you see me.mtn","sound":"sakurajima voice1.mp3","hit_area":"D_REF.HEAD"}
+		],
+		"idle":[
+			{"file":"idle_00.mtn"}
+		],
+		"tap_body":[
+			{"file":"3sakurajima mai.mtn","sound":"sakurajima voice3.mp3","hit_area":"D_REF.BODY"}
+		],
+		"tap_head2":[
+			{"file":"2see ya.mtn","sound":"sakurajima voice2.mp3","hit_area":"D_REF.HEAD1"}
+		],
+		"tap_body2":[
+			{"file":"4okay with lewd.mtn","sound":"sakurajima voice4.mp3","hit_area":"D_REF.BOOBS"}
+		]
+	},
+	"physics":"physics.json",
+	"project_settings":"sakurajima4.settings.json",
+	"name":""
+}

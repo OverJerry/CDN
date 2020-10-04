@@ -42,7 +42,7 @@ function loadWidget(config) {
 	let userAction = false,
 		userActionTimer,
 		messageTimer,
-		messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "记得把小家加入 Adblock 白名单哦！", "Where is my teacher helper?", "我觉得李白和杜甫是真的"];
+		messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "Where is my teacher helper?", "我觉得李白和杜甫是真的"];
 	window.addEventListener("mousemove", () => userAction = true);
 	window.addEventListener("keydown", () => userAction = true);
 	setInterval(() => {
@@ -142,7 +142,7 @@ function loadWidget(config) {
 				text="又是"+name+"的死宅吗？，又在电子班牌上调戏人家了";
 			}
 			else{
-				text="欢迎来到D2304班级主页 我是班姬XiuFei~酱 今天也要好好学习生物哦";
+				text="今天的4班又是和平的一天呢~";
 			}
 				
 		}

@@ -1,0 +1,109 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "1_3.moc3",
+    "Textures": [
+      "textures/1469e43c084825dd9c4f5c2418126af8.png",
+      "textures/53da188dbac8f4a411a5814eeac9a528.png",
+      "textures/b94ec6b5f79493b69357fd818cc6be2f.png",
+      "textures/5cf5954a82681beabdea086c66773c8c.png",
+      "textures/a4d16009b037625733c60cc9207fb50c.png",
+      "textures/2b672bdc8e74e455da2e7ec61f6dc0ee.png",
+      "textures/60259a6a97afc7fe5dac05c55d9552f3.png",
+      "textures/39b4dcb6d96c91ec30f7e9f249fc1129.png",
+      "textures/83d924fb546ac8d159d2a68400938669.png",
+      "textures/ed21077f574e8f460718ea9d99356c06.png"
+    ],
+    "Physics": "1_3.physics3.json",
+    "Motions": {
+      "": [
+        {
+          "File": "motions/idle.motion3.json"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {
+      "Items": [
+        {
+          "Name": "PARAM_CHEEK",
+          "Id": "PARAM_CHEEK",
+          "Axis": 0,
+          "Factor": 0.3,
+          "ReleaseType": 0,
+          "Type": 2
+        },
+        {
+          "Name": "PARAM_RUYAO_X",
+          "Id": "PARAM_RUYAO_X",
+          "Axis": 0,
+          "Factor": 0.003,
+          "ReleaseType": 0,
+          "BeginMtn": "Bust:parameters lock PARAM_BODY_ANGLE_X 0.5",
+          "EndMtn": "Bust:parameters unlock PARAM_BODY_ANGLE_X"
+        },
+        {
+          "Name": "PARAM_RUYAO_Y",
+          "Id": "PARAM_RUYAO_Y",
+          "Axis": 1,
+          "Factor": -0.003,
+          "ReleaseType": 0
+        }
+      ],
+      "Enabled": true
+    },
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {},
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    }
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "HitArea"
+    },
+    {
+      "Name": "body",
+      "Id": "HitArea2"
+    },
+    {
+      "Name": "Bouquet_C_01",
+      "Id": "Bouquet_C_01"
+    }
+  ],
+  "Options": {
+    "ScaleFactor": 2,
+    "PositionX": 2.0,
+    "TexFixed": true
+  }
+}

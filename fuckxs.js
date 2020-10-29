@@ -33,7 +33,7 @@ fontLink.setAttribute("href", "https://cdn.jsdelivr.net/npm/font-awesome/css/fon
 fontLink.setAttribute("rel", "stylesheet");
 body.insertAdjacentElement("afterbegin", fontLink);
 
-window.onload = () = >{
+window.onload = () =>{
     new l2dViewer({
         el: document.getElementById('L2dCanvas'),
         basePath: 'https://cdn.jsdelivr.net/gh/OverJerry/CDN@1.4/live2dv3',

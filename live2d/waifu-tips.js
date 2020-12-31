@@ -181,14 +181,16 @@ function loadWidget(config) {
 	}
 
 	(function initModel() {
-		let modelId = localStorage.getItem("modelId"),
-			modelTexturesId = localStorage.getItem("modelTexturesId");
+		// let modelId = localStorage.getItem("modelId"),
+			// modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (modelId === null) {
 			// 首次访问加载 指定模型 的 指定材质
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 		}
-		loadModel(modelId, modelTexturesId);
+		
+		// loadModel(modelId, modelTexturesId);
+		loadRandModel();
 		fetch(waifuPath)
 			.then(response => response.json())
 			.then(result => {
@@ -257,7 +259,9 @@ function loadWidget(config) {
 				.then(response => response.json())
 				.then(result => {
 					if (result.textures.id === 1 && (modelTexturesId === 1 || modelTexturesId === 0)) showMessage("我还没有其他衣服呢！", 4000, 10);
-					else loadModel(modelId, result.textures.id, "我的新衣服好看嘛？");
+					else {
+						loadModel(modelId, result.textures.id, "我的新衣服好看嘛？");
+					}
 				});
 		}
 	}
@@ -267,12 +271,14 @@ function loadWidget(config) {
 		if (useCDN) {
 			if (!modelList) await loadModelList();
 			const index = (++modelId >= modelList.models.length) ? 0 : modelId;
-			loadModel(index, 0, modelList.messages[index]);
+			// loadModel(index, 0, modelList.messages[index]);
+			loadRandModel();
 		} else {
 			fetch(`${apiPath}switch/?id=${modelId}`)
 				.then(response => response.json())
 				.then(result => {
-					loadModel(result.model.id, 0, result.model.message);
+					// loadModel(result.model.id, 0, result.model.message);
+					loadRandModel();
 				});
 		}
 	}

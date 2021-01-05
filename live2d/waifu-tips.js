@@ -181,6 +181,7 @@ function loadWidget(config) {
 	}
 
 	(function initModel() {
+		/*
 		let modelId = localStorage.getItem("modelId"),
 			modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (modelId === null) {
@@ -188,9 +189,12 @@ function loadWidget(config) {
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 		}
-		
-		// loadModel(modelId, modelTexturesId);
-		loadRandModel();
+		*/
+		let modelId = randomSelection(modelList.models[modelId]);
+		let modelTexturesId = localStorage.getItem("modelTexturesId");
+		// let modelTexturesId = randomSelection(modelList.models[modelTexturesId]);
+		loadModel(modelId, modelTexturesId);
+		// loadRandModel();
 		fetch(waifuPath)
 			.then(response => response.json())
 			.then(result => {
@@ -271,14 +275,14 @@ function loadWidget(config) {
 		if (useCDN) {
 			if (!modelList) await loadModelList();
 			const index = (++modelId >= modelList.models.length) ? 0 : modelId;
-			// loadModel(index, 0, modelList.messages[index]);
-			loadRandModel();
+			loadModel(index, 0, modelList.messages[index]);
+			// loadRandModel();
 		} else {
 			fetch(`${apiPath}switch/?id=${modelId}`)
 				.then(response => response.json())
 				.then(result => {
-					// loadModel(result.model.id, 0, result.model.message);
-					loadRandModel();
+					loadModel(result.model.id, 0, result.model.message);
+					// loadRandModel();
 				});
 		}
 	}

@@ -190,8 +190,8 @@ function loadWidget(config) {
 			modelTexturesId = 53; // 材质 ID
 		}
 		*/
-		loadModelList();
-		let modelId = randomSelection(modelList.models[modelId]);
+		// loadModelList();
+		let modelId = Math.round(Math.random()*19);
 		let modelTexturesId = localStorage.getItem("modelTexturesId");
 		// let modelTexturesId = randomSelection(modelList.models[modelTexturesId]);
 		loadModel(modelId, modelTexturesId);
